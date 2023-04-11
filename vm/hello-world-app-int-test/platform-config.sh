@@ -1,0 +1,5 @@
+export CLUSTER_NAME="VM"
+export DATABASE_URL="mysql://west:8806/mysql2"
+export ENVIRONMENT="Dev"
+export REGION="West US"
+export SOME_COMMON_ENVIRONMENT_VARIABLE="false"

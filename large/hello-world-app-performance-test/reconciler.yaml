@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: observability-prometheus
+  name: hello-world-app-performance-test
   namespace: argocd
 spec:
     destination:
-        namespace: dev-platform-team-observability-prometheus
+        namespace: dev-kaizen-app-team-hello-world-app-performance-test
         server: https://kubernetes.default.svc              
     project: default
     source:
-        path: ./prometheus
-        repoURL: https://github.com/eedorenko/kalypso-oci-svc-gitops
+        path: ./performance-test
+        repoURL: https://github.com/eedorenko/kalypso-oci-app-gitops
         targetRevision: dev
         directory:
             recurse: true

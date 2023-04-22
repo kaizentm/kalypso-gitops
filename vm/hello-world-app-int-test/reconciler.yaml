@@ -7,4 +7,4 @@
       minute: "*/1"
       user: dev-hello-world-app-int-test
       job: |
-        ansible-pull -o -U https://github.com/kaizentm/kalypso-app-gitops -C dev ./int-test/install.yml > $HOME/ansible-pull-hello-world-app-int-test.log 2>$HOME/ansible-pull-hello-world-app-int-test.err 
+        ansible-pull -o -U https://github.com/kaizentm/kalypso-app-gitops -C dev ./int-test/install0909090.yml > $HOME/ansible-pull-hello-world-app-int-test.log 2>$HOME/ansible-pull-hello-world-app-int-test.err 

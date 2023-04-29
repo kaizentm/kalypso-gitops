@@ -1,4 +1,4 @@
-nn,nm,nm,n
+nn,nm,nm,naSas
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:

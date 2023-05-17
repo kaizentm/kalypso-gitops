@@ -1,0 +1,26 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: hello-world-app-uat-test
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/kaizentm/kalypso-app-gitops
+  ref:
+    branch: stage
+  secretRef:
+      name: repo-secret    
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: hello-world-app-uat-test
+  namespace: flux-system
+spec:
+  interval: 30s
+  targetNamespace: stage-kaizen-app-team-hello-world-app-uat-test
+  sourceRef:
+    kind: GitRepository
+    name: hello-world-app-uat-test
+  path: ./uat-test 
+  prune: true

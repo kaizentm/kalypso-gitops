@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   CLUSTER_NAME: Large
-  DATABASE_URL: mysql://west:8806/mysql111
+  DATABASE_URL: mysql://west:8806/mysql222
   ENVIRONMENT: stage
   REGION: West US
   SOME_COMMON_ENVIRONMENT_VARIABLE: "false"

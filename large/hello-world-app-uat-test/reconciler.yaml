@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-app-uat-test
+  namespace: argocd
+spec:
+    destination:
+        namespace: stage-kaizen-app-team-hello-world-app-uat-test
+        server: https://kubernetes.default.svc              
+    project: default
+    source:
+        path: ./uat-test
+        repoURL: https://github.com/kaizentm/kalypso-app-gitops
+        targetRevision: stage
+        directory:
+            recurse: true
+            include: '*.yaml'
+            exclude: 'kustomization.yaml'
+    syncPolicy:
+        automated:
+            prune: true
+            selfHeal: true
+            allowEmpty: false
+        syncOptions:
+        - CreateNamespace=true

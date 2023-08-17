@@ -11,3 +11,4 @@ resources:
 - sample-rs-srm-d2-ssu.yaml
 - sample-rs-srm-d4-ssu.yaml
 - sample-rs-srm-t2-ssu.yaml
+- deployment-descriptor.yaml

@@ -45,22 +45,10 @@ spec:
         - name: PORT
           value: "8080"
         - name: CLUSTER_NAME
-          valueFrom:
-              configMapKeyRef:
-                name: platform-config
-                key: CLUSTER_NAME
+          value: cluster
         - name: REGION
-          valueFrom:
-              configMapKeyRef:
-                name: platform-config
-                key: REGION
+          value: westus
         - name: ENVIRONMENT
-          valueFrom:
-              configMapKeyRef:
-                name: platform-config
-                key: ENVIRONMENT
+          value: dev
         - name: DATABASE_URL
-          valueFrom:
-              configMapKeyRef:
-                name: platform-config
-                key: DATABASE_URL
+          value: https://google.com

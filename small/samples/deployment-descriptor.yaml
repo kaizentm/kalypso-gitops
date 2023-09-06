@@ -1,7 +1,7 @@
 apiVersion: hub.kalypso.io/v1alpha1
 kind: DeploymentDescriptor
 metadata:
-  name: hello-world-dev-drone
+  name: hello-world-stage-drone
 spec:
   workload:
     name: hello-world
@@ -15,10 +15,10 @@ spec:
             name: kaizentm
   deploymentTarget:
     name: drone
-    environment: dev
+    environment: stage
     manifests:
         repo: https://github.com/kaizentm/kalypso-gitops
-        branch: dev
+        branch: stage
         path: drone
   workloadVersion:
     version: 1.1.142

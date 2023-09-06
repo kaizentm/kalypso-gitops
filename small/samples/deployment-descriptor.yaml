@@ -21,7 +21,7 @@ spec:
         branch: stage
         path: drone
   workloadVersion:
-    version: 1.1.142
+    version: 1.1.143
     build: build-137
     commit: cd7673d9da7e164d3f127f210b03f2facc2d8a6b
     buildTime: "2023-07-27T23:25:05Z"

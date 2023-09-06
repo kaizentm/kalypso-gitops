@@ -15,7 +15,7 @@ spec:
 ---
 # Source: hello-world/templates/deployment.yaml
 apiVersion: apps/v1
-kind: Deploymentncasncja
+kind: Deployment
 metadata:
   name: hello-world-deployment
   namespace: test

@@ -4,8 +4,8 @@ data:
   DATABASE_URL: mysql://west:8806/mysql2
   ENVIRONMENT: Dev
   REGION: West US
-  SOME_COMMON_ENVIRONMENT_VARIABLE: "false"
+  SOME_COMMON_ENVIRONMENT_VARIABLE: "true"
 kind: ConfigMap
 metadata:
   name: platform-config
-  namespace: dev-platform-team-observability-prometheus
+  namespace: dev-large-observability-prometheus

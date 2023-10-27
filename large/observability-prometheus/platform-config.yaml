@@ -8,4 +8,4 @@ data:
 kind: ConfigMap
 metadata:
   name: platform-config
-  namespace: dev-platform-team-observability-prometheus
+  namespace: dev-large-observability-prometheus

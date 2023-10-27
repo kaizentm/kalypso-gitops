@@ -8,4 +8,4 @@ data:
 kind: ConfigMap
 metadata:
   name: platform-config
-  namespace: dev-kaizen-app-team-hello-world-app-performance-test
+  namespace: dev-large-hello-world-app-performance-test

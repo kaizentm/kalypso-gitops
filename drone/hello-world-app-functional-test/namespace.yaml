@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: dev-large-hello-world-app-performance-test 
+  name: dev-drone-hello-world-app-functional-test 
   labels:
     environment: dev
     workspace: kaizen-app-team
     workload: hello-world-app
-    deploymentTarget: hello-world-app-performance-test
+    deploymentTarget: hello-world-app-functional-test
     someLabel: some-value

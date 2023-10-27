@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: dev-kaizen-app-team-hello-world-app-performance-test 
+  name: stage-large-hello-world-app-uat-test 
   labels:
-    environment: dev
+    environment: stage
     workspace: kaizen-app-team
     workload: hello-world-app
-    deploymentTarget: hello-world-app-performance-test
+    deploymentTarget: hello-world-app-uat-test
     someLabel: some-value

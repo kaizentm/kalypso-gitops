@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world-app-performance-test
+  name: hello-world-app-uat-test
   namespace: argocd
 spec:
     destination:
-        namespace: dev-kaizen-app-team-hello-world-app-performance-test
+        namespace: stage-large-hello-world-app-uat-test
         server: https://kubernetes.default.svc              
     project: default
     source:
-        path: ./performance-test
+        path: ./uat-test
         repoURL: https://github.com/kaizentm/kalypso-app-gitops
-        targetRevision: dev
+        targetRevision: stage
         directory:
             recurse: true
             include: '*.yaml'

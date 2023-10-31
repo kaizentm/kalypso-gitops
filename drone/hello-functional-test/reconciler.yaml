@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: dev.kaizen-app-team.hello-world-app.functional-test.drone
+  name: dev.kaizen-app-team.hello.functional-test.drone
   namespace: flux-system
 spec:
   interval: 30s
@@ -14,14 +14,14 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: dev.kaizen-app-team.hello-world-app.functional-test.drone
+  name: dev.kaizen-app-team.hello.functional-test.drone
   namespace: flux-system
 spec:
   interval: 30s
-  targetNamespace: dev-drone-hello-world-app-functional-test
+  targetNamespace: dev-drone-hello-functional-test
   sourceRef:
     kind: GitRepository
-    name: dev.kaizen-app-team.hello-world-app.functional-test.drone
+    name: dev.kaizen-app-team.hello.functional-test.drone
   path: ./functional-test 
   suspend: false
   prune: true

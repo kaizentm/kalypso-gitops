@@ -8,4 +8,4 @@ data:
 kind: ConfigMap
 metadata:
   name: platform-config
-  namespace: dev-drone-hello-world-app-functional-test
+  namespace: dev-drone-hello-functional-test

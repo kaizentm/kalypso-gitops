@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: stage-drone-hello-uat-test 
+  labels:
+    environment: stage
+    workspace: kaizen-app-team
+    workload: hello
+    deploymentTarget: hello-uat-test
+    someLabel: some-value

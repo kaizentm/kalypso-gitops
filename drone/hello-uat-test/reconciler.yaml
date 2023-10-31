@@ -1,0 +1,26 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: hello-uat-test
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/kaizentm/kalypso-app-gitops
+  ref:
+    branch: stage
+  secretRef:
+      name: repo-secret    
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: hello-uat-test
+  namespace: flux-system
+spec:
+  interval: 30s
+  targetNamespace: stage-drone-hello-uat-test
+  sourceRef:
+    kind: GitRepository
+    name: hello-uat-test
+  path: ./uat-test 
+  prune: true

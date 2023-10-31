@@ -3,11 +3,11 @@
   tasks:
   - name: create a user
     ansible.builtin.user:
-        name: dev-hello-world-app-int-test
+        name: dev-hello-int-test
   - name: cope platform configs
     ansible.builtin.copy:
         src: ./platform-config.sh
-        dest: /home/dev-hello-world-app-int-test/platform-config.sh
-        owner: dev-hello-world-app-int-test
-        group: dev-hello-world-app-int-test
+        dest: /home/dev-hello-int-test/platform-config.sh
+        owner: dev-hello-int-test
+        group: dev-hello-int-test
         mode: u+rw,g-wx,o-rwx

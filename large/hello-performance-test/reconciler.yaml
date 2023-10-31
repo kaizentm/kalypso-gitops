@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world-app-performance-test
+  name: hello-performance-test
   namespace: argocd
 spec:
     destination:
-        namespace: dev-large-hello-world-app-performance-test
+        namespace: dev-large-hello-performance-test
         server: https://kubernetes.default.svc              
     project: default
     source:

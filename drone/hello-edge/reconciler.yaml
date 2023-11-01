@@ -1,0 +1,29 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: prod.kaizentm.greeting.hello-edge.drone
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/kaizentm/kalypso-app-gitops
+  ref:
+    branch: prod
+  secretRef:
+      name: repo-secret    
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: prod.kaizentm.greeting.hello-edge.drone
+  namespace: flux-system
+spec:
+  interval: 30s
+  targetNamespace: prod-drone-hello-edge
+  sourceRef:
+    kind: GitRepository
+    name: prod.kaizentm.greeting.hello-edge.drone
+  path: ./edge 
+  suspend: false
+  prune: true
+
+  

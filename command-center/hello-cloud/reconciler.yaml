@@ -1,0 +1,29 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: prod.kaizentm.greeting.hello-cloud.command-center
+  namespace: flux-system
+spec:
+  interval: 30s
+  url: https://github.com/kaizentm/kalypso-app-gitops
+  ref:
+    branch: prod
+  secretRef:
+      name: repo-secret    
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: prod.kaizentm.greeting.hello-cloud.command-center
+  namespace: flux-system
+spec:
+  interval: 30s
+  targetNamespace: prod-command-center-hello-cloud
+  sourceRef:
+    kind: GitRepository
+    name: prod.kaizentm.greeting.hello-cloud.command-center
+  path: ./cloud 
+  suspend: false
+  prune: true
+
+  

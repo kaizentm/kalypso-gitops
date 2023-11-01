@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod-command-center-hello-cloud 
+  labels:
+    environment: prod
+    workspace: kaizentm
+    workload: hello
+    deploymentTarget: hello-cloud
+    someLabel: some-value

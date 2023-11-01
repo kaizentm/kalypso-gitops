@@ -3,7 +3,9 @@ data:
   CLUSTER_NAME: Drone
   DATABASE_URL: mysql://restricted-host:3306/mysqlrty123
   ENVIRONMENT: Dev
+  GLOBAL_ENVIRONMENT_VARIABLE: "true"
   REGION: East US
+  RESTRICTED_ZONE: "true"
   SOME_COMMON_ENVIRONMENT_VARIABLE: "true"
 kind: ConfigMap
 metadata:

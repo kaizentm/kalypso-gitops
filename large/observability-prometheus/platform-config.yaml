@@ -3,6 +3,7 @@ data:
   CLUSTER_NAME: Large
   DATABASE_URL: mysql://west:8806/mysql2
   ENVIRONMENT: Dev
+  GLOBAL_ENVIRONMENT_VARIABLE: "true"
   REGION: West US
   SOME_COMMON_ENVIRONMENT_VARIABLE: "true"
 kind: ConfigMap

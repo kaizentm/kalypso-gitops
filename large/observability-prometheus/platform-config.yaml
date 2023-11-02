@@ -6,6 +6,7 @@ data:
   GLOBAL_ENVIRONMENT_VARIABLE: "true"
   REGION: West US
   SOME_COMMON_ENVIRONMENT_VARIABLE: "true"
+  WEST_US_SPECIFIC_ENVIRONMENT_VARIABLE: "true"
 kind: ConfigMap
 metadata:
   name: platform-config

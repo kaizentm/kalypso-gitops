@@ -5,6 +5,7 @@ data:
   ENVIRONMENT: stage
   REGION: West US
   SOME_COMMON_ENVIRONMENT_VARIABLE: "false"
+  WEST_US_SPECIFIC_ENVIRONMENT_VARIABLE: "true"
 kind: ConfigMap
 metadata:
   name: platform-config
